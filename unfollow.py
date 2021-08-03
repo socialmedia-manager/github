@@ -6,7 +6,7 @@ from github.GithubException import GithubException
 if __name__ == '__main__':
 
 
-    gitUser = Github('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')
+    gitUser = Github('TOKEN')
 
     try:
         followers = [follower.id for follower in gitUser.get_user().get_followers()] 

@@ -5,9 +5,9 @@ from github import Github
 if __name__ == '__main__':
     
     gitUser = Github('TOKEN')
-
+    user = 'USER'
     try:
-        repos = gitUser.get_user('codeanit').get_repos('type=public')
+        repos = gitUser.get_user(user).get_repos('type=public')
         for repo in repos:
             request = urllib.request.Request(
             'https://api.github.com/repos/%s' % repo.full_name, 
